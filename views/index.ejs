@@ -1,0 +1,28 @@
+<html>
+<head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+</head>
+
+<body>
+  <h1>Twitter Hotspot</h1>
+  <h2>...for Procur</h2>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io.connect('http://127.0.0.1:3000');
+    socket.on('news', function (data) {
+      console.log(data);
+      socket.emit('my other event', { my: 'data'});
+    });
+  </script>
+</body>
+
+
+
+
+
+
+
+
+
+</html>
